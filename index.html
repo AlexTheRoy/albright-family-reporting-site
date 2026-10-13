@@ -347,6 +347,7 @@ table.bg-tbl tr.bg-camprow td{background:var(--panel2);color:var(--accent2);font
   <button data-tab="providers">Current Providers</button>
   <button data-tab="geo">Geography</button>
   <button data-tab="wb">Who's Buying</button>
+  <button data-tab="calls">Inbound Calls</button>
 </nav>
 
 <main>
@@ -577,6 +578,166 @@ table.bg-tbl tr.bg-camprow td{background:var(--panel2);color:var(--accent2);font
   </section>
 
   <div class="foot" id="foot"></div>
+  <!-- INBOUND CALLS -->
+  <style id="cr-style">
+  #tab-calls .cr-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:22px}
+  #tab-calls .cr-step{display:grid;grid-template-columns:150px 1fr 70px;gap:12px;align-items:center;margin:0 0 10px}
+  #tab-calls .cr-step .nm{color:var(--ink);font-weight:600;font-size:13px}
+  #tab-calls .cr-step .nm small{display:block;color:var(--dim);font-weight:400;font-size:11px}
+  #tab-calls .cr-bar{background:var(--panel2);border-radius:6px;height:26px;overflow:hidden}
+  #tab-calls .cr-bar i{display:flex;align-items:center;height:100%;padding-left:9px;min-width:26px;background:var(--accent);color:#06202b;font-style:normal;font-weight:700;font-size:12.5px;border-radius:6px}
+  #tab-calls .cr-bar i.lt{background:rgba(55,198,208,.35);color:var(--ink)}
+  #tab-calls .cr-bar i.zero{background:var(--bad);color:#fff}
+  #tab-calls .cr-step .pc{text-align:right;font-variant-numeric:tabular-nums;font-weight:700}
+  #tab-calls .cr-step .pc small{display:block;color:var(--dim);font-weight:400;font-size:11px}
+  #tab-calls .cr-out{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--line);font-size:13px}
+  #tab-calls .cr-out:last-child{border-bottom:none}
+  #tab-calls .cr-out .sw{width:10px;height:10px;border-radius:3px;flex:none}
+  #tab-calls .cr-out .v{margin-left:auto;font-weight:700;font-variant-numeric:tabular-nums}
+  #tab-calls .cr-stack{display:flex;height:14px;border-radius:7px;overflow:hidden;margin:4px 0 12px}
+  #tab-calls table.cr-tbl td,#tab-calls table.cr-tbl th{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  #tab-calls table.cr-tbl td.t{white-space:nowrap;font-variant-numeric:tabular-nums}
+  #tab-calls table.cr-tbl td.n{color:var(--muted);font-size:12.5px;min-width:320px}
+  #tab-calls table.cr-tbl td.c{font-weight:600;white-space:nowrap}
+  #tab-calls .tg{display:inline-block;padding:2px 9px;border-radius:20px;font-size:11px;font-weight:600;white-space:nowrap;background:var(--panel2);border:1px solid var(--line2);color:var(--muted)}
+  #tab-calls .tg.q{color:var(--accent2);border-color:rgba(79,209,197,.45);background:rgba(55,198,208,.10)}
+  #tab-calls .tg.w{color:var(--warn);border-color:rgba(224,169,59,.45);background:rgba(224,169,59,.10)}
+  #tab-calls .cr-fu{display:grid;grid-template-columns:28px 1fr;gap:12px;padding:11px 0;border-bottom:1px solid var(--line)}
+  #tab-calls .cr-fu:last-child{border-bottom:none}
+  #tab-calls .cr-fu .num{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;background:var(--panel2);color:var(--muted)}
+  #tab-calls .cr-fu .num.w{background:rgba(224,169,59,.16);color:var(--warn)}
+  #tab-calls .cr-fu .num.q{background:rgba(55,198,208,.14);color:var(--accent2)}
+  #tab-calls .cr-fu .h{font-weight:600;font-size:13.5px}
+  #tab-calls .cr-fu .h .tg{margin-left:8px;vertical-align:1px}
+  #tab-calls .cr-fu .b{color:var(--muted);font-size:12.5px;margin-top:2px}
+  #tab-calls .cr-fu .m{color:var(--dim);font-size:11.5px;margin-top:3px}
+  #tab-calls .cr-fu-grid{display:grid;grid-template-columns:1fr 1fr;column-gap:28px}
+  #tab-calls .cr-coach{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-bottom:22px}
+  #tab-calls .cr-coach .panel{margin:0;padding-bottom:14px}
+  #tab-calls .cr-coach .who small{display:block;color:var(--dim);font-size:11.5px;font-weight:400}
+  #tab-calls .cr-it{font-size:12.5px;color:var(--ink);padding:9px 11px;border-radius:8px;margin-top:9px;border-left:3px solid var(--good);background:rgba(47,191,113,.08)}
+  #tab-calls .cr-it.o{border-left-color:var(--warn);background:rgba(224,169,59,.08)}
+  #tab-calls .cr-it b{display:block;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--good);margin-bottom:2px}
+  #tab-calls .cr-it.o b{color:var(--warn)}
+  #tab-calls .cr-hl{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:14px}
+  @media (max-width:900px){#tab-calls .cr-grid,#tab-calls .cr-fu-grid{grid-template-columns:1fr} #tab-calls .cr-step{grid-template-columns:110px 1fr 56px}}
+  @media print{#tab-calls .panel,#tab-calls .cr-fu,#tab-calls tr{break-inside:avoid}}
+  </style>
+  <section class="tab-pane" id="tab-calls">
+    <div class="sectiontitle"><span class="bar"></span><h2>Inbound Call Review &middot; Oct 1 to Oct 13, 2026</h2><a class="refresh" style="margin-left:auto;text-decoration:none" href="Albright-Inbound-Call-Review-10-13-26.html">Open full call review &rarr;</a></div>
+    <div class="campnote">13 inbound calls from 10 prospects &middot; Producers: Taylor, Alexis, Taya, Michelle &middot; Summaries and Q&amp;A from GOAL call AI</div>
+
+    <div class="kpis">
+      <div class="kpi"><div class="lab">Inbound Calls</div><div class="val">13</div><div class="sub">From 10 prospects</div></div>
+      <div class="kpi"><div class="lab">Picked Up</div><div class="val">12 of 13</div><div class="sub">Average pickup 3.6 seconds</div></div>
+      <div class="kpi"><div class="lab">Conversations</div><div class="val">5</div><div class="sub">With a producer, 60 seconds+</div></div>
+      <div class="kpi"><div class="lab">Average Length</div><div class="val">18:24</div><div class="sub">Median 18:49 &middot; 4:36 to 31:42</div></div>
+      <div class="kpi"><div class="lab">Quotes Given</div><div class="val">2</div><div class="sub">2 of 10 callers</div></div>
+      <div class="kpi"><div class="lab">Policies Sold</div><div class="val" style="color:var(--bad)">0</div><div class="sub">None bound in this window</div></div>
+      <div class="kpi"><div class="lab">Total Talk Time</div><div class="val">1h 32m</div><div class="sub">5 producer conversations</div></div>
+      <div class="kpi"><div class="lab">Next Steps Booked</div><div class="val">1</div><div class="sub">Dated follow-up on 1 of 2 quotes</div></div>
+      <div class="kpi"><div class="lab">Dispositions Missing</div><div class="val" style="color:var(--warn)">9 of 10</div><div class="sub">No outcome logged in GOAL</div></div>
+    </div>
+
+    <div class="cr-grid">
+      <div class="panel" style="padding-bottom:14px">
+        <h3>Call funnel</h3><div class="ph-sub">Share of inbound calls</div>
+        <div class="cr-step"><div class="nm">Inbound calls<small>from prospects</small></div><div class="cr-bar"><i class="lt" style="width:100%">13</i></div><div class="pc">100%</div></div>
+        <div class="cr-step"><div class="nm">Picked up<small>phone system answered</small></div><div class="cr-bar"><i style="width:92%">12</i></div><div class="pc">92%<small>of calls</small></div></div>
+        <div class="cr-step"><div class="nm">Conversations<small>producer, 60 seconds+</small></div><div class="cr-bar"><i style="width:38%">5</i></div><div class="pc">38%<small>of calls</small></div></div>
+        <div class="cr-step"><div class="nm">Quoted<small>price given</small></div><div class="cr-bar"><i style="width:15%">2</i></div><div class="pc">15%<small>of calls</small></div></div>
+        <div class="cr-step"><div class="nm">Sold<small>policy bound</small></div><div class="cr-bar"><i class="zero" style="width:0">0</i></div><div class="pc">0%<small>of calls</small></div></div>
+        <div class="note" style="margin-top:8px">4 calls from 2 callers were held and sent to voicemail. 5 of 10 callers reached a producer.</div>
+      </div>
+      <div class="panel" style="padding-bottom:10px">
+        <h3>Call outcomes</h3><div class="ph-sub">All 13 calls</div>
+        <div class="cr-stack"><span style="width:15.4%;background:var(--accent)"></span><span style="width:23.1%;background:#2c7a8a"></span><span style="width:30.8%;background:var(--warn)"></span><span style="width:23.1%;background:#6b6f76"></span><span style="width:7.7%;background:var(--bad)"></span></div>
+        <div class="cr-out"><span class="sw" style="background:var(--accent)"></span>Quoted<span class="v">2</span></div>
+        <div class="cr-out"><span class="sw" style="background:#2c7a8a"></span>Talked, no quote<span class="v">3</span></div>
+        <div class="cr-out"><span class="sw" style="background:var(--warn)"></span>Hold or voicemail<span class="v">4</span></div>
+        <div class="cr-out"><span class="sw" style="background:#6b6f76"></span>Under 60 seconds<span class="v">3</span></div>
+        <div class="cr-out"><span class="sw" style="background:var(--bad)"></span>Missed<span class="v">1</span></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3>Calls at a glance</h3><div class="ph-sub">One row per caller, quotes first</div>
+      <div style="overflow-x:auto">
+      <table class="cr-tbl">
+        <thead><tr><th>Caller</th><th>Date</th><th>Producer</th><th>Length</th><th>Status</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td class="c">Michael Skonieczny</td><td class="t">Oct 2</td><td>Alexis</td><td class="t">21:20</td><td><span class="tg q">Quoted</span></td><td class="n">Liability + UM on 2 vehicles at $182/mo, $155 with a home bundle. Follow-up booked for Mon, Oct 5 at 10 AM. Renews Nov 2.</td></tr>
+          <tr><td class="c">Eusephia Wilson-Ross</td><td class="t">Oct 12</td><td>Taylor</td><td class="t">31:42</td><td><span class="tg q">Quoted</span></td><td class="n">Home $481/mo ($455 with higher deductibles) vs $3,100/yr at Farmers. Auto $273.68 vs $245. Sending her Farmers policy to compare.</td></tr>
+          <tr><td class="c">Lesa Lasneski</td><td class="t">Oct 12</td><td>Taya</td><td class="t">15:34</td><td><span class="tg w">No next step</span></td><td class="n">Pays over $400/mo for home + auto at Texas Farm Bureau. Declined a quote for now; talking it over with her husband.</td></tr>
+          <tr><td class="c">Leroy Loville</td><td class="t">Oct 5</td><td>Not named</td><td class="t">18:49</td><td><span class="tg">Not recorded</span></td><td class="n">Called back 3 minutes after a missed call. No recording or summary in GOAL and no disposition. Home, currently with Farmers.</td></tr>
+          <tr><td class="c">Sean Price</td><td class="t">Oct 5</td><td>Michelle</td><td class="t">4:36</td><td><span class="tg w">Callback pending</span></td><td class="n">Dropped from Taylor's call when her computer went down. Michelle texted him so Taylor's callback is recognized.</td></tr>
+          <tr><td class="c">Lizzie Hill</td><td class="t">Oct 3</td><td>None</td><td class="t">13:29</td><td><span class="tg w">Voicemail</span></td><td class="n">3 calls in under 20 minutes about homeowners. Held, then sent to voicemail. No callback visible.</td></tr>
+          <tr><td class="c">Janice Jenkins</td><td class="t">Oct 3</td><td>None</td><td class="t">1:40</td><td><span class="tg w">Voicemail</span></td><td class="n">Left a voicemail asking for a homeowners quote. No callback visible.</td></tr>
+          <tr><td class="c">Patricia Fortune</td><td class="t">Oct 10</td><td>None</td><td class="t">0:39</td><td><span class="tg">Under 60s</span></td><td class="n">Hung up during the greeting and hold.</td></tr>
+          <tr><td class="c">Dean Perez</td><td class="t">Oct 1</td><td>None</td><td class="t">0:38</td><td><span class="tg">Under 60s</span></td><td class="n">Hung up during the greeting.</td></tr>
+          <tr><td class="c">America Ramirez</td><td class="t">Oct 12</td><td>None</td><td class="t">0:07</td><td><span class="tg">Under 60s</span></td><td class="n">Hung up during the greeting.</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <div class="panel" style="padding-bottom:10px">
+      <h3>Follow-up list</h3><div class="ph-sub">Worth calling this week</div>
+      <div class="cr-fu-grid">
+        <div>
+          <div class="cr-fu"><div class="num w">1</div><div><div class="h">Lizzie Hill<span class="tg w">Call Today</span></div><div class="b">Called three times on Oct 3 about homeowners and never reached anyone. Currently with Farmers.</div><div class="m">Last call: Oct 3 &middot; voicemail &middot; 1:44</div></div></div>
+          <div class="cr-fu"><div class="num w">2</div><div><div class="h">Janice Jenkins<span class="tg w">Call Today</span></div><div class="b">Left a voicemail on Oct 3 asking for a homeowners quote.</div><div class="m">Last call: Oct 3 &middot; voicemail &middot; 1:40</div></div></div>
+          <div class="cr-fu"><div class="num w">3</div><div><div class="h">Sean Price<span class="tg w">Call Today</span></div><div class="b">Waiting on Taylor's callback since the Oct 5 dropped call. Currently with Progressive; the text thread is already open.</div><div class="m">Last call: Oct 5 &middot; Michelle &middot; 4:36</div></div></div>
+          <div class="cr-fu"><div class="num w">4</div><div><div class="h">Leroy Loville<span class="tg w">Call Today</span></div><div class="b">An 18-minute call on Oct 5 left no recording or disposition. Confirm where it ended.</div><div class="m">Last call: Oct 5 &middot; producer not named &middot; 18:49</div></div></div>
+          <div class="cr-fu"><div class="num w">5</div><div><div class="h">America Ramirez<span class="tg w">Call Today</span></div><div class="b">Hung up during the greeting on Oct 12. Home inquiry, no quote yet.</div><div class="m">Last call: Oct 12 &middot; 0:07</div></div></div>
+        </div>
+        <div>
+          <div class="cr-fu"><div class="num w">6</div><div><div class="h">Patricia Fortune<span class="tg w">Call Today</span></div><div class="b">Hung up while on hold on Oct 10. Home inquiry, no quote yet.</div><div class="m">Last call: Oct 10 &middot; 0:39</div></div></div>
+          <div class="cr-fu"><div class="num w">7</div><div><div class="h">Dean Perez<span class="tg w">Call Today</span></div><div class="b">Hung up during the greeting on Oct 1. Home inquiry, no quote yet.</div><div class="m">Last call: Oct 1 &middot; 0:38</div></div></div>
+          <div class="cr-fu"><div class="num q">8</div><div><div class="h">Eusephia Wilson-Ross<span class="tg q">Quoted</span></div><div class="b">Get the Farmers policy photo, compare deductibles (especially wind/hail), and set a time to review.</div><div class="m">Last call: Oct 12 &middot; Taylor &middot; 31:42</div></div></div>
+          <div class="cr-fu"><div class="num q">9</div><div><div class="h">Michael Skonieczny<span class="tg q">Quoted</span></div><div class="b">The Oct 5 follow-up date has passed with no sale logged. Renews Nov 2; requote with the home bundle at $155/mo.</div><div class="m">Last call: Oct 2 &middot; Alexis &middot; 21:20</div></div></div>
+          <div class="cr-fu"><div class="num">10</div><div><div class="h">Lesa Lasneski<span class="tg">Loose Next Step</span></div><div class="b">Offer a call with her and her husband together and run the quote then.</div><div class="m">Last call: Oct 12 &middot; Taya &middot; 15:34</div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sectiontitle" style="margin-top:4px"><span class="bar"></span><h2>Coaching focus</h2></div>
+    <div class="cr-hl">
+      <div class="kpi"><div class="val">5 of 10</div><div class="sub">callers reached a producer</div></div>
+      <div class="kpi"><div class="val">2 of 4</div><div class="sub">recorded conversations got a quote</div></div>
+      <div class="kpi"><div class="val">1 of 2</div><div class="sub">quotes with a dated next step</div></div>
+      <div class="kpi"><div class="val">1 of 10</div><div class="sub">callers with a disposition logged</div></div>
+    </div>
+    <div class="cr-coach">
+      <div class="panel"><h3 class="who">Taylor<small>1 conversation &middot; 1 quote</small></h3>
+        <div class="cr-it"><b>Keep doing</b>Quoted Eusephia Wilson-Ross on home and auto in one call, then cut auto to $273.68 by dropping full coverage on the 2010 Camaro.</div>
+        <div class="cr-it"><b>Keep doing</b>Caught that Eusephia did not know her Farmers deductibles and opened a text thread to get the policy.</div>
+        <div class="cr-it o"><b>Opportunity</b>Put a date on Eusephia's review and ask for the switch if the deductibles show she is underinsured today.</div>
+        <div class="cr-it o"><b>Opportunity</b>Call Sean Price back. He has been waiting since the Oct 5 dropped call.</div>
+      </div>
+      <div class="panel"><h3 class="who">Alexis<small>1 conversation &middot; 1 quote</small></h3>
+        <div class="cr-it"><b>Keep doing</b>Booked the only dated next step: Mon, Oct 5 at 10 AM, with the quote emailed to Michael Skonieczny.</div>
+        <div class="cr-it"><b>Keep doing</b>Showed the home bundle savings, $182 down to $155/mo.</div>
+        <div class="cr-it o"><b>Opportunity</b>With Michael renewing Nov 2, rework the quote before he renews: discounts, the bundle, and adding his son's vehicle.</div>
+        <div class="cr-it o"><b>Opportunity</b>Update Michael's disposition after the Oct 5 follow-up so the outcome is visible.</div>
+      </div>
+      <div class="panel"><h3 class="who">Taya<small>1 conversation</small></h3>
+        <div class="cr-it"><b>Keep doing</b>Told Lesa Lasneski the agency is local and has been competitive against Texas Farm Bureau.</div>
+        <div class="cr-it o"><b>Opportunity</b>Lesa pays over $400/mo. Run the quote on the call with the details already on file instead of leaving it open.</div>
+        <div class="cr-it o"><b>Opportunity</b>She wanted to talk to her husband first. Book a time with both of them.</div>
+      </div>
+      <div class="panel"><h3 class="who">Michelle<small>1 call &middot; callback handoff</small></h3>
+        <div class="cr-it"><b>Keep doing</b>Recovered Sean Price's dropped call and texted him from the office line so the callback is recognized.</div>
+        <div class="cr-it o"><b>Opportunity</b>Log a disposition and callback time so the handoff to Taylor is visible in GOAL.</div>
+      </div>
+      <div class="panel"><h3 class="who">Phones<small>4 hold or voicemail calls</small></h3>
+        <div class="cr-it"><b>Keep doing</b>The phone system picked up 12 of 13 calls in under 5 seconds.</div>
+        <div class="cr-it o"><b>Opportunity</b>Lizzie Hill and Janice Jenkins went to voicemail. Route new-quote calls to a live producer, or return voicemails the same day.</div>
+        <div class="cr-it o"><b>Opportunity</b>Log a disposition for every caller. 9 of 10 have none.</div>
+      </div>
+    </div>
+    <div class="note">Calls Oct 1 to Oct 13, 2026 (Central). A conversation is a call of 60 seconds or longer with a producer; calls held and sent to voicemail are counted separately. Leroy Loville's 18:49 call has no recording in GOAL.</div>
+  </section>
 </main>
 
 <!-- Map libraries inlined so the county map renders with no network (d3-array + d3-geo v3, topojson-client v3) -->
