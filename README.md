@@ -5,9 +5,10 @@ Static, self-contained GOAL performance reports for Albright Family Insurance (#
 ## Structure
 
 - `index.html`: report hub (Campaign Reports, Website & Research)
-- `Albright-Campaign-Overview-Since-Launch-10-13-26.html`: all campaigns since launch (Jul 25, 2025 through Oct 13, 2026)
-- `Albright-Home-Campaign-Performance-Since-Launch-10-13-26.html`, `Albright-Home-After-Hours-Campaign-Performance-Since-Launch-10-13-26.html`, `Albright-Auto-Campaign-Performance-Since-Launch-10-13-26.html`: one page per campaign
-- `Albright-Inbound-Call-Review-10-13-26.html`: inbound call review, Oct 1 to Oct 13, 2026
+- `Albright-Campaign-Overview-Since-Launch-10-19-26.html`: all campaigns since launch (Jul 25, 2025 through Oct 19, 2026)
+- `Albright-Home-Campaign-Performance-Since-Launch-10-19-26.html`, `Albright-Home-After-Hours-Campaign-Performance-Since-Launch-10-19-26.html`, `Albright-Auto-Campaign-Performance-Since-Launch-10-19-26.html`: one page per campaign
+- `Albright-Inbound-Call-Review-10-19-26.html`: inbound call review, Sep 19 to Oct 19, 2026
+- `Albright-Source-ZIP-Sales-10-19-26.html`, `Albright-ZIP-Sales-10-19-26.csv`: sales by ad channel (Aid) and traffic tier, source, county and ZIP
 - `Albright-SEO-Audit-10-13-26.html`: Allstate agent page SEO audit
 - `Albright-TX-Hail-Storm-Risk-10-13-26.html`, `Albright-TX-Demographic-Research-10-13-26.html`, `Albright-TX-ZIP-Data-10-13-26.csv`: Texas market research
 - `Albright-Performance-Dashboard-10-10-26.html`: earlier interactive dashboard (not linked from the hub)

@@ -240,6 +240,33 @@ body{margin:0;}
 :root[data-theme="dark"] .theme-toggle:hover{color:#339fff;border-color:#64748b;}
 :root[data-theme="dark"] .theme-toggle .i-sun{display:block;} :root[data-theme="dark"] .theme-toggle .i-moon{display:none;}
 @media print{ .theme-toggle{display:none !important;} }
+/* Where Sales Came From (aid_section.py) */
+.atable{min-width:0;}
+.atable.wide{min-width:640px;}
+.atable th.r,.atable td.r{padding-right:20px;}
+.atable th.r:last-child,.atable td.r:last-child{padding-right:4px;}
+.atable td{padding:13px 0;}
+.atable .big{font-size:17px;}
+.atable td .sub.ts{max-width:300px;margin:4px 0 0 18px;}
+.atable td.r .sub.pk{max-width:none;font-size:12px;white-space:nowrap;}
+@media (max-width:560px){
+  .atable th{font-size:10px;letter-spacing:.04em;}
+  .atable th.r,.atable td.r{padding-right:7px;}
+  .atable td.r .sub.pk{font-size:11px;}
+  .atable .nm{gap:6px;}
+  .atable .big{font-size:15px;}
+  .atable .nm{font-size:13px;}
+  .atable .cc{font-size:14px;}
+  .atable td .sub.ts{margin-left:0;}
+  .atable td .nm .bd{display:none;}
+}
+.atable tr.tot td{border-top:1px solid var(--border-strong);border-bottom:none;}
+.atable tr.muted .nm,.atable tr.muted .big{color:var(--ink-muted);}
+.atable .aidn{font-variant-numeric:tabular-nums;white-space:nowrap;}
+.atable .cc{font-size:15px;font-weight:600;color:var(--ink-soft);font-variant-numeric:tabular-nums;}
+.anote{font-size:13px;color:var(--ink-muted);line-height:1.6;margin-top:16px;}
+.anote b{color:var(--ink);font-weight:600;}
+.astack{display:grid;gap:16px;}
 </style>
 </head>
 <body>
@@ -253,12 +280,13 @@ body{margin:0;}
     <div class="eb">Performance Review</div>
     <div class="rule"></div>
     <h1>Albright Family Insurance</h1>
-    <div class="who">Prepared for <b>the Albright team</b><br>Webster, TX<br>Home &middot; Since launch, Jul 25, 2025 through Oct 13, 2026</div>
+    <div class="who">Prepared for <b>the Albright team</b><br>Webster, TX<br>Home &middot; Since launch, Jul 25, 2025 through Oct 19, 2026</div>
     <nav aria-label="Report sections">
       <a href="#s1"><span class="ix">01</span>Key Metrics</a>
       <a href="#s2"><span class="ix">02</span>Performance by Source</a>
-      <a href="#s3"><span class="ix">03</span>Conversion Funnel</a>
-      <a href="#s4"><span class="ix">04</span>Recommendations</a>
+      <a href="#s3"><span class="ix">03</span>Where Sales Came From</a>
+      <a href="#s4"><span class="ix">04</span>Conversion Funnel</a>
+      <a href="#s5"><span class="ix">05</span>Recommendations</a>
     </nav>
     <div class="foot">GOAL Performance Marketing<br>All conversion metrics calculated based on Leads, not Clicks.</div>
   </aside>
@@ -266,46 +294,46 @@ body{margin:0;}
   <main class="main">
 
     <div class="strip">
-      <div class="f"><span class="l">Reporting period</span><span class="v">Since launch, Jul 25, 2025 through Oct 13, 2026</span></div>
+      <div class="f"><span class="l">Reporting period</span><span class="v">Since launch, Jul 25, 2025 through Oct 19, 2026</span></div>
       <div class="f"><span class="l">Lines</span><span class="v">Home</span></div>
       <div class="f"><span class="l">Lead source</span><span class="v">GOAL branded campaigns</span></div>
       <span class="badge">Home</span>
     </div>
 
     <section class="block" id="s1">
-      <div class="bhead"><span class="ix">01</span><div><h2>Key Metrics</h2><p>Since launch, Jul 25, 2025 through Oct 13, 2026</p></div></div>
+      <div class="bhead"><span class="ix">01</span><div><h2>Key Metrics</h2><p>Since launch, Jul 25, 2025 through Oct 19, 2026</p></div></div>
       <div class="kgrid">
-        <div class="kc"><div class="v">2,710</div><div class="k">Leads</div><div class="d">Home</div></div>
+        <div class="kc"><div class="v">2,731</div><div class="k">Leads</div><div class="d">Home</div></div>
         <div class="kc"><div class="v">&ndash;</div><div class="k">Contact Rate</div><div class="d">No Contacted pixel yet</div></div>
-        <div class="kc"><div class="v">22.5%</div><div class="k">Quote Rate</div><div class="d">610 of 2,710 leads</div></div>
-        <div class="kc hl"><div class="v">$873</div><div class="k">CPA</div><div class="d">Cost per sale &middot; 53 sold</div></div>
-        <div class="kc"><div class="v">53</div><div class="k">Policies Sold</div><div class="d">31 X-dates captured</div></div>
-        <div class="kc"><div class="v">183</div><div class="k">Inbound Calls</div><div class="d">Direct from prospects</div></div>
+        <div class="kc"><div class="v">22.4%</div><div class="k">Quote Rate</div><div class="d">611 of 2,731 leads</div></div>
+        <div class="kc hl"><div class="v">$836</div><div class="k">CPA</div><div class="d">Cost per sale &middot; 56 sold</div></div>
+        <div class="kc"><div class="v">56</div><div class="k">Policies Sold</div><div class="d">31 X-dates captured</div></div>
+        <div class="kc"><div class="v">187</div><div class="k">Inbound Calls</div><div class="d">Direct from prospects</div></div>
       </div>
     </section>
 
     <section class="block" id="s2">
-      <div class="bhead"><span class="ix">02</span><div><h2>Performance by Source</h2><p>Since launch, Jul 25, 2025 through Oct 13, 2026</p></div></div>
+      <div class="bhead"><span class="ix">02</span><div><h2>Performance by Source</h2><p>Since launch, Jul 25, 2025 through Oct 19, 2026</p></div></div>
       <div class="split">
         <div class="panel">
           <div class="pt">Lead Mix</div>
           <div class="donut-wrap">
             <div class="donut">
-              <svg viewBox="0 0 42 42" width="180" height="180" role="img" aria-label="Lead mix: Tier 3 1,315, Tier 1 682, Tier 2 577, Home SearchB 93, Other 43">
+              <svg viewBox="0 0 42 42" width="180" height="180" role="img" aria-label="Lead mix: Tier 3 1,318, Tier 1 696, Tier 2 578, Home SearchB 96, Other 43">
                 <circle class="track" cx="21" cy="21" r="15.915" fill="none" stroke-width="6"></circle>
-                <circle class="seg" cx="21" cy="21" r="15.915" fill="none" stroke="var(--s1)" stroke-width="6" stroke-dasharray="0 100" data-dash="48.5" transform="rotate(-90 21 21)"></circle>
-                <circle class="seg" cx="21" cy="21" r="15.915" fill="none" stroke="var(--s2)" stroke-width="6" stroke-dasharray="0 100" data-dash="25.2" data-offset="48.5" transform="rotate(-90 21 21)"></circle>
-                <circle class="seg" cx="21" cy="21" r="15.915" fill="none" stroke="var(--s3)" stroke-width="6" stroke-dasharray="0 100" data-dash="21.3" data-offset="73.7" transform="rotate(-90 21 21)"></circle>
-                <circle class="seg" cx="21" cy="21" r="15.915" fill="none" stroke="var(--s4)" stroke-width="6" stroke-dasharray="0 100" data-dash="3.4" data-offset="95.0" transform="rotate(-90 21 21)"></circle>
-                <circle class="seg" cx="21" cy="21" r="15.915" fill="none" stroke="var(--s5)" stroke-width="6" stroke-dasharray="0 100" data-dash="1.6" data-offset="98.4" transform="rotate(-90 21 21)"></circle>
+                <circle class="seg" cx="21" cy="21" r="15.915" fill="none" stroke="var(--s1)" stroke-width="6" stroke-dasharray="0 100" data-dash="48.3" transform="rotate(-90 21 21)"></circle>
+                <circle class="seg" cx="21" cy="21" r="15.915" fill="none" stroke="var(--s2)" stroke-width="6" stroke-dasharray="0 100" data-dash="25.5" data-offset="48.3" transform="rotate(-90 21 21)"></circle>
+                <circle class="seg" cx="21" cy="21" r="15.915" fill="none" stroke="var(--s3)" stroke-width="6" stroke-dasharray="0 100" data-dash="21.2" data-offset="73.8" transform="rotate(-90 21 21)"></circle>
+                <circle class="seg" cx="21" cy="21" r="15.915" fill="none" stroke="var(--s4)" stroke-width="6" stroke-dasharray="0 100" data-dash="3.5" data-offset="95.0" transform="rotate(-90 21 21)"></circle>
+                <circle class="seg" cx="21" cy="21" r="15.915" fill="none" stroke="var(--s5)" stroke-width="6" stroke-dasharray="0 100" data-dash="1.5" data-offset="98.5" transform="rotate(-90 21 21)"></circle>
               </svg>
-              <div class="center"><div class="n">2,710</div><div class="l">leads</div></div>
+              <div class="center"><div class="n">2,731</div><div class="l">leads</div></div>
             </div>
             <div class="legend">
-              <div class="li"><span class="sw" style="background:var(--s1)"></span><span class="nm">Tier 3</span><span class="vl">1,315</span></div>
-              <div class="li"><span class="sw" style="background:var(--s2)"></span><span class="nm">Tier 1</span><span class="vl">682</span></div>
-              <div class="li"><span class="sw" style="background:var(--s3)"></span><span class="nm">Tier 2</span><span class="vl">577</span></div>
-              <div class="li"><span class="sw" style="background:var(--s4)"></span><span class="nm">Home SearchB</span><span class="vl">93</span></div>
+              <div class="li"><span class="sw" style="background:var(--s1)"></span><span class="nm">Tier 3</span><span class="vl">1,318</span></div>
+              <div class="li"><span class="sw" style="background:var(--s2)"></span><span class="nm">Tier 1</span><span class="vl">696</span></div>
+              <div class="li"><span class="sw" style="background:var(--s3)"></span><span class="nm">Tier 2</span><span class="vl">578</span></div>
+              <div class="li"><span class="sw" style="background:var(--s4)"></span><span class="nm">Home SearchB</span><span class="vl">96</span></div>
               <div class="li"><span class="sw" style="background:var(--s5)"></span><span class="nm">Other</span><span class="vl">43</span></div>
             </div>
           </div>
@@ -316,27 +344,27 @@ body{margin:0;}
             <tbody>
               <tr>
                 <td><div class="nm"><span class="bd" style="background:var(--s1)"></span>Tier 3</div><span class="tag blue">Primary</span></td>
-                <td class="r"><span class="big">1,315</span></td>
-                <td class="r"><span class="big">87</span></td>
-                <td><div class="sub">49% of leads. 336 quoted (25.6%), 30 sold. CPA $609.</div></td>
+                <td class="r"><span class="big">1,318</span></td>
+                <td class="r"><span class="big">88</span></td>
+                <td><div class="sub">48% of leads. 336 quoted (25.5%), 30 sold. CPA $611.</div></td>
               </tr>
               <tr>
                 <td><div class="nm"><span class="bd" style="background:var(--s2)"></span>Tier 1</div></td>
-                <td class="r"><span class="big">682</span></td>
-                <td class="r"><span class="big">51</span></td>
-                <td><div class="sub">25% of leads. 146 quoted (21.4%), 12 sold. CPA $1,091.</div></td>
+                <td class="r"><span class="big">696</span></td>
+                <td class="r"><span class="big">52</span></td>
+                <td><div class="sub">25% of leads. 146 quoted (21.0%), 13 sold. CPA $1,034.</div></td>
               </tr>
               <tr>
                 <td><div class="nm"><span class="bd" style="background:var(--s3)"></span>Tier 2</div></td>
-                <td class="r"><span class="big">577</span></td>
+                <td class="r"><span class="big">578</span></td>
                 <td class="r"><span class="big">36</span></td>
-                <td><div class="sub">21% of leads. 104 quoted (18.0%), 10 sold. CPA $1,164.</div></td>
+                <td><div class="sub">21% of leads. 104 quoted (18.0%), 11 sold. CPA $1,063.</div></td>
               </tr>
               <tr>
                 <td><div class="nm"><span class="bd" style="background:var(--s4)"></span>Home SearchB</div></td>
-                <td class="r"><span class="big">93</span></td>
-                <td class="r"><span class="big">5</span></td>
-                <td><div class="sub">3% of leads. 10 quoted (10.8%), 0 sold.</div></td>
+                <td class="r"><span class="big">96</span></td>
+                <td class="r"><span class="big">7</span></td>
+                <td><div class="sub">4% of leads. 11 quoted (11.5%), 1 sold. CPA $2,420.</div></td>
               </tr>
               <tr>
                 <td><div class="nm"><span class="bd" style="background:var(--s5)"></span>Other</div></td>
@@ -351,31 +379,153 @@ body{margin:0;}
     </section>
 
     <section class="block" id="s3">
-      <div class="bhead"><span class="ix">03</span><div><h2>Conversion Funnel</h2><p>Since launch, Jul 25, 2025 through Oct 13, 2026</p></div></div>
+      <div class="bhead"><span class="ix">03</span><div><h2>Where Sales Came From: Ad Channel and Traffic Tier</h2><p>Sold prospects by the ad channel (Aid) and traffic tier of the original lead &middot; Since launch, Jul 25, 2025 through Oct 19, 2026</p></div></div>
+      <div class="astack">
+        <div class="panel tscroll">
+          <div class="pt">Sales by ad channel (Aid)</div>
+          <table class="ltable atable">
+            <thead><tr><th>Ad channel &middot; traffic tier</th><th class="r">Sales</th><th class="r">Share</th><th class="r">Multi-policy</th><th class="r">Premium</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><div class="nm"><span class="bd" style="background:var(--s1)"></span><span class="aidn">AID 112416</span></div><div class="sub ts">Tier 3</div></td>
+                <td class="r"><span class="big">16</span></td>
+                <td class="r"><span class="cc">31%</span></td>
+                <td class="r"><span class="cc">10</span></td>
+                <td class="r"><span class="cc">$76,014<div class="sub pk">15 of 16 known</div></span></td>
+              </tr>
+              <tr>
+                <td><div class="nm"><span class="bd" style="background:var(--s2)"></span><span class="aidn">AID 113771</span></div><div class="sub ts">Tier 1 (6), Tier 3 (1)</div></td>
+                <td class="r"><span class="big">7</span></td>
+                <td class="r"><span class="cc">14%</span></td>
+                <td class="r"><span class="cc">4</span></td>
+                <td class="r"><span class="cc">$38,637</span></td>
+              </tr>
+              <tr>
+                <td><div class="nm"><span class="bd" style="background:var(--s3)"></span><span class="aidn">AID 113807</span></div><div class="sub ts">Tier 2 (3), Tier 3 (1)</div></td>
+                <td class="r"><span class="big">4</span></td>
+                <td class="r"><span class="cc">8%</span></td>
+                <td class="r"><span class="cc">1</span></td>
+                <td class="r"><span class="cc">$13,784</span></td>
+              </tr>
+              <tr>
+                <td><div class="nm"><span class="bd" style="background:var(--s4)"></span><span class="aidn">AID 113035</span></div><div class="sub ts">Tier 2</div></td>
+                <td class="r"><span class="big">3</span></td>
+                <td class="r"><span class="cc">6%</span></td>
+                <td class="r"><span class="cc">3</span></td>
+                <td class="r"><span class="cc">$8,848</span></td>
+              </tr>
+              <tr>
+                <td><div class="nm"><span class="bd" style="background:var(--s5)"></span><span class="aidn">AID 113200</span></div><div class="sub ts">Home Search</div></td>
+                <td class="r"><span class="big">2</span></td>
+                <td class="r"><span class="cc">4%</span></td>
+                <td class="r"><span class="cc">2</span></td>
+                <td class="r"><span class="cc">$9,975</span></td>
+              </tr>
+              <tr>
+                <td><div class="nm"><span class="bd" style="background:var(--s7)"></span>All other channels</div><div class="sub ts">12 ad channels, 16 sales</div></td>
+                <td class="r"><span class="big">16</span></td>
+                <td class="r"><span class="cc">31%</span></td>
+                <td class="r"><span class="cc">13</span></td>
+                <td class="r"><span class="cc">$46,963</span></td>
+              </tr>
+              <tr class="muted">
+                <td><div class="nm">Not traced</div><div class="sub ts">Not matched to a lead record</div></td>
+                <td class="r"><span class="big">3</span></td>
+                <td class="r"><span class="cc">6%</span></td>
+                <td class="r"><span class="cc">2</span></td>
+                <td class="r"><span class="cc">$8,639</span></td>
+              </tr>
+              <tr class="tot">
+                <td><div class="nm">Total</div><div class="sub ts">17 ad channels</div></td>
+                <td class="r"><span class="big">51</span></td>
+                <td class="r"><span class="cc">100%</span></td>
+                <td class="r"><span class="cc">35</span></td>
+                <td class="r"><span class="cc">$202,861<div class="sub pk">50 of 51 known</div></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="panel tscroll">
+          <div class="pt">Sales by traffic tier</div>
+          <table class="ltable atable">
+            <thead><tr><th>Traffic tier</th><th class="r">Sales</th><th class="r">Share</th><th class="r">Multi-policy</th><th class="r">Premium</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><div class="nm"><span class="bd" style="background:var(--s1)"></span>Tier 3</div><div class="sub ts">7 ad channels</div></td>
+                <td class="r"><span class="big">23</span></td>
+                <td class="r"><span class="cc">45%</span></td>
+                <td class="r"><span class="cc">15</span></td>
+                <td class="r"><span class="cc">$103,328<div class="sub pk">22 of 23 known</div></span></td>
+              </tr>
+              <tr>
+                <td><div class="nm"><span class="bd" style="background:var(--s2)"></span>Tier 1</div><div class="sub ts">6 ad channels</div></td>
+                <td class="r"><span class="big">13</span></td>
+                <td class="r"><span class="cc">25%</span></td>
+                <td class="r"><span class="cc">8</span></td>
+                <td class="r"><span class="cc">$53,187</span></td>
+              </tr>
+              <tr>
+                <td><div class="nm"><span class="bd" style="background:var(--s3)"></span>Tier 2</div><div class="sub ts">4 ad channels</div></td>
+                <td class="r"><span class="big">9</span></td>
+                <td class="r"><span class="cc">18%</span></td>
+                <td class="r"><span class="cc">7</span></td>
+                <td class="r"><span class="cc">$26,524</span></td>
+              </tr>
+              <tr>
+                <td><div class="nm"><span class="bd" style="background:var(--s4)"></span>Home Search</div><div class="sub ts">1 ad channel</div></td>
+                <td class="r"><span class="big">2</span></td>
+                <td class="r"><span class="cc">4%</span></td>
+                <td class="r"><span class="cc">2</span></td>
+                <td class="r"><span class="cc">$9,975</span></td>
+              </tr>
+              <tr>
+                <td><div class="nm"><span class="bd" style="background:var(--s5)"></span>Home SearchB</div><div class="sub ts">1 ad channel</div></td>
+                <td class="r"><span class="big">1</span></td>
+                <td class="r"><span class="cc">2%</span></td>
+                <td class="r"><span class="cc">1</span></td>
+                <td class="r"><span class="cc">$1,207</span></td>
+              </tr>
+              <tr class="muted">
+                <td><div class="nm">Not traced</div><div class="sub ts">Tier unknown</div></td>
+                <td class="r"><span class="big">3</span></td>
+                <td class="r"><span class="cc">6%</span></td>
+                <td class="r"><span class="cc">2</span></td>
+                <td class="r"><span class="cc">$8,639</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="anote"><b>79 of 82</b> sales on the account were traced to their original lead record by phone, and 3 could not be traced. For Home that is 48 of 51 traced, 3 not traced. Each traced sale is counted under the ad channel (Aid) and traffic tier the lead arrived on. Sales are the sold prospects matched from your status files. Multi-policy means the sale is marked Sold - Multi Policy or lists two or more items; premium is shown where your status file included it. Shares are of all sales in this view. GOAL's Bound event counts 56 sales here; 51 of them are matched to a sold prospect in your status files, and this view covers those 51.</div>
+    </section>
+
+    <section class="block" id="s4">
+      <div class="bhead"><span class="ix">04</span><div><h2>Conversion Funnel</h2><p>Since launch, Jul 25, 2025 through Oct 19, 2026</p></div></div>
       <div class="fpanel">
-        <div class="fstep"><div class="lab">Your ad shown<small>impressions</small></div><div class="fbar"><i class="pre" data-w="100">12,139</i></div><div class="pct"><b>100%</b></div></div>
-        <div class="fstep"><div class="lab">Clicks<small>to your page</small></div><div class="fbar"><i class="pre" data-w="90">4,023</i></div><div class="pct"><b>33.1%</b><span>of impressions</span></div></div>
+        <div class="fstep"><div class="lab">Your ad shown<small>impressions</small></div><div class="fbar"><i class="pre" data-w="100">12,249</i></div><div class="pct"><b>100%</b></div></div>
+        <div class="fstep"><div class="lab">Clicks<small>to your page</small></div><div class="fbar"><i class="pre" data-w="90">4,060</i></div><div class="pct"><b>33.1%</b><span>of impressions</span></div></div>
         <div class="fdiv">Conversion funnel &middot; rates based on Leads</div>
-        <div class="fstep"><div class="lab">Leads<small>submitted</small></div><div class="fbar"><i class="cv" data-w="86">2,710</i></div><div class="pct"><b>67.4%</b><span>of clicks</span></div></div>
+        <div class="fstep"><div class="lab">Leads<small>submitted</small></div><div class="fbar"><i class="cv" data-w="86">2,731</i></div><div class="pct"><b>67.3%</b><span>of clicks</span></div></div>
         <div class="fstep"><div class="lab">Contacted<small>reached</small></div><div class="fbar"><i class="pre" data-w="0"></i></div><div class="pct"><b>&ndash;</b><span>no pixel</span></div></div>
-        <div class="fstep"><div class="lab">Quotes<small>presented</small></div><div class="fbar"><i class="cv" data-w="72">610</i></div><div class="pct"><b>22.5%</b><span>of leads</span></div></div>
-        <div class="fstep"><div class="lab">Sales<small>policies sold</small></div><div class="fbar"><i class="cv end" data-w="49">53</i></div><div class="pct"><b>2.0%</b><span>of leads</span></div></div>
-        <div class="fnote">Contact rate shows a dash because the account does not send a Contacted pixel yet. Quote rate <b>22.5%</b> (610 of 2,710 leads). Lead to sale <b>2.0%</b> (53 of 2,710). CPA <b>$873</b>.</div>
+        <div class="fstep"><div class="lab">Quotes<small>presented</small></div><div class="fbar"><i class="cv" data-w="72">611</i></div><div class="pct"><b>22.4%</b><span>of leads</span></div></div>
+        <div class="fstep"><div class="lab">Sales<small>policies sold</small></div><div class="fbar"><i class="cv end" data-w="49">56</i></div><div class="pct"><b>2.1%</b><span>of leads</span></div></div>
+        <div class="fnote">Contact rate shows a dash because the account does not send a Contacted pixel yet. Quote rate <b>22.4%</b> (611 of 2,731 leads). Lead to sale <b>2.1%</b> (56 of 2,731); those 56 sales carry 125 items. CPA <b>$836</b> ($46,802.14 &divide; 56).</div>
       </div>
     </section>
 
-    <section class="block" id="s4" style="margin-bottom:0;">
-      <div class="bhead"><span class="ix">04</span><div><h2>Recommendations</h2><p>Next review period</p></div></div>
+    <section class="block" id="s5" style="margin-bottom:0;">
+      <div class="bhead"><span class="ix">05</span><div><h2>Recommendations</h2><p>Next review period</p></div></div>
       <div class="plan">
-        <div class="pstep"><div class="num">1</div><div><div class="h">Raise the Bid on Tier 3<span class="tag blue">GOAL</span></div><div class="b">A 10% bid increase. Daily limits stay where they are.</div><div class="m"><b>Metric behind it:</b> Tier 3 quoted 336 of 1,315 leads (25.6%) and sold 30 at $609 each, against $1,091 for Tier 1 and $1,164 for Tier 2.</div></div></div>
-        <div class="pstep"><div class="num">2</div><div><div class="h">Lower the Bid on Home SearchB<span class="tag blue">GOAL</span></div><div class="b">A 10% bid decrease on Home SearchB.</div><div class="m"><b>Metric behind it:</b> 93 leads and $2,342 with 10 quotes (10.8%) and no sales, against a 22.5% quote rate for the campaign.</div></div></div>
-        <div class="pstep"><div class="num">3</div><div><div class="h">Quote Auto With Every Home Lead<span class="tag neutral">Agency</span></div><div class="b">Ask about the household's vehicles on every Home call and quote the bundle.</div><div class="m"><b>Metric behind it:</b> Home quote rate is 22.5% (610 of 2,710 leads), and Auto quotes at 26.0% when it is asked for.</div></div></div>
-        <div class="pstep"><div class="num">4</div><div><div class="h">Work Every Lead Across 30 Days<span class="tag neutral">Agency</span></div><div class="b">Contact frequency by week, across phone, text, and email:</div>
-          <div class="cad"><div class="c"><div class="w">Week 1</div><div class="n">3+/day</div><div class="s">all channels</div></div><div class="c"><div class="w">Week 2</div><div class="n">2+/day</div><div class="s">all channels</div></div><div class="c"><div class="w">Weeks 3&ndash;4</div><div class="n">every 2&ndash;3 days</div><div class="s">all channels</div></div></div><div class="m"><b>Metric behind it:</b> 2,100 of 2,710 Home leads (77%) have no recorded quote.</div></div></div>
+        <div class="pstep"><div class="num">1</div><div><div class="h">Raise the Bid on Tier 3<span class="tag blue">GOAL</span></div><div class="b">A 10% bid increase on Tier 3. Daily limits stay where they are.</div><div class="m"><b>Metric behind it:</b> Tier 3 quoted 336 of 1,318 leads (25.5%) and sold 30 at $611 each, against $1,034 for Tier 1 and $1,063 for Tier 2. AID 112416, a Tier 3 ad channel, brought 16 of 51 matched Home sales (31%).</div></div></div>
+        <div class="pstep"><div class="num">2</div><div><div class="h">Lower the Home Bid on Home SearchB<span class="tag blue">GOAL</span></div><div class="b">A 10% bid decrease on Home SearchB in the Home campaign, so more of the spend goes to the tiers that sell. Daily limits stay where they are.</div><div class="m"><b>Metric behind it:</b> Home SearchB: 96 Home leads for $2,420, 11 quoted (11.5%, against 22.4% for Home) and 1 sold, a $2,420 CPA.</div></div></div>
+        <div class="pstep"><div class="num">3</div><div><div class="h">Talk Through Ad Channel Focus at the Next Review<span class="tag neutral">For discussion</span></div><div class="b">Nothing has been changed at the ad channel level; this is a topic to talk through together. Sales are concentrated in a few ad channels, so at the next account review we can walk through whether to lean further into the strongest ones inside Tier 3 and Tier 1.</div><div class="m"><b>Metric behind it:</b> In Home, AID 112416 (Tier 3) brought 16 of 51 matched sales and AID 113771 brought 7; the other traced Home sales are spread across 15 channels.</div></div></div>
+        <div class="pstep"><div class="num">4</div><div><div class="h">Quote Auto With Every Home Lead<span class="tag neutral">Agency</span></div><div class="b">Ask about the household's vehicles on every Home call and quote the bundle.</div><div class="m"><b>Metric behind it:</b> Home quote rate is 22.4% (611 of 2,731 leads), and Auto quotes at 24.9% when it is asked for. 35 of 51 matched Home sales are already multi-policy.</div></div></div>
+        <div class="pstep"><div class="num">5</div><div><div class="h">Work Every Lead Across 30 Days<span class="tag neutral">Agency</span></div><div class="b">Contact frequency by week, across phone, text, and email:</div>
+          <div class="cad"><div class="c"><div class="w">Week 1</div><div class="n">3+/day</div><div class="s">all channels</div></div><div class="c"><div class="w">Week 2</div><div class="n">2+/day</div><div class="s">all channels</div></div><div class="c"><div class="w">Weeks 3&ndash;4</div><div class="n">every 2&ndash;3 days</div><div class="s">all channels</div></div></div><div class="m"><b>Metric behind it:</b> 2,120 of 2,731 Home leads (78%) have no recorded quote.</div></div></div>
       </div>
     </section>
 
-    <div class="mfoot"><span>All conversion metrics calculated based on Leads, not Clicks.</span><span>GOAL &middot; Since launch, Jul 25, 2025 through Oct 13, 2026</span></div>
+    <div class="mfoot"><span>All conversion metrics calculated based on Leads, not Clicks.</span><span>GOAL &middot; Since launch, Jul 25, 2025 through Oct 19, 2026</span></div>
 
   </main>
 </div>
