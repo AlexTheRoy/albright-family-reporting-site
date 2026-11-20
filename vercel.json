@@ -2,20 +2,112 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/Albright-Campaign-Overview-Since-Launch-11-04-26",
+      "destination": "/Albright-Campaign-Overview-Since-Launch-11-19-26",
+      "permanent": false
+    },
+    {
+      "source": "/Albright-Campaign-Overview-Since-Launch-11-04-26.html",
+      "destination": "/Albright-Campaign-Overview-Since-Launch-11-19-26",
+      "permanent": false
+    },
+    {
+      "source": "/Albright-Home-Campaign-Performance-Since-Launch-11-04-26",
+      "destination": "/Albright-Home-Campaign-Performance-Since-Launch-11-19-26",
+      "permanent": false
+    },
+    {
+      "source": "/Albright-Home-Campaign-Performance-Since-Launch-11-04-26.html",
+      "destination": "/Albright-Home-Campaign-Performance-Since-Launch-11-19-26",
+      "permanent": false
+    },
+    {
+      "source": "/Albright-Home-After-Hours-Campaign-Performance-Since-Launch-11-04-26",
+      "destination": "/Albright-Home-After-Hours-Campaign-Performance-Since-Launch-11-19-26",
+      "permanent": false
+    },
+    {
+      "source": "/Albright-Home-After-Hours-Campaign-Performance-Since-Launch-11-04-26.html",
+      "destination": "/Albright-Home-After-Hours-Campaign-Performance-Since-Launch-11-19-26",
+      "permanent": false
+    },
+    {
+      "source": "/Albright-Auto-Campaign-Performance-Since-Launch-11-04-26",
+      "destination": "/Albright-Auto-Campaign-Performance-Since-Launch-11-19-26",
+      "permanent": false
+    },
+    {
+      "source": "/Albright-Auto-Campaign-Performance-Since-Launch-11-04-26.html",
+      "destination": "/Albright-Auto-Campaign-Performance-Since-Launch-11-19-26",
+      "permanent": false
+    },
+    {
+      "source": "/Albright-Monthly-Sales-by-Source-11-04-26",
+      "destination": "/Albright-Monthly-Sales-by-Source-11-19-26",
+      "permanent": false
+    },
+    {
+      "source": "/Albright-Monthly-Sales-by-Source-11-04-26.html",
+      "destination": "/Albright-Monthly-Sales-by-Source-11-19-26",
+      "permanent": false
+    },
+    {
+      "source": "/Albright-Source-ZIP-Sales-11-04-26",
+      "destination": "/Albright-Source-ZIP-Sales-11-19-26",
+      "permanent": false
+    },
+    {
+      "source": "/Albright-Source-ZIP-Sales-11-04-26.html",
+      "destination": "/Albright-Source-ZIP-Sales-11-19-26",
+      "permanent": false
+    },
+    {
+      "source": "/Albright-Inbound-Call-Review-11-04-26",
+      "destination": "/Albright-Inbound-Call-Review-11-19-26",
+      "permanent": false
+    },
+    {
+      "source": "/Albright-Inbound-Call-Review-11-04-26.html",
+      "destination": "/Albright-Inbound-Call-Review-11-19-26",
+      "permanent": false
+    },
+    {
+      "source": "/Albright-ZIP-Sales-11-04-26.csv",
+      "destination": "/Albright-ZIP-Sales-11-19-26.csv",
+      "permanent": false
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
       ]
     },
     {
       "source": "/",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
       ]
     }
   ]

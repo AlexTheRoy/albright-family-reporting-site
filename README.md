@@ -5,15 +5,16 @@ Static, self-contained GOAL performance reports for Albright Family Insurance (#
 ## Structure
 
 - `index.html`: report hub (Campaign Reports, Website & Research)
-- `Albright-Campaign-Overview-Since-Launch-11-04-26.html`: all campaigns since launch (Jul 25, 2025 through Nov 4, 2026), with the Home (LM) lead marketplace section
-- `Albright-Home-Campaign-Performance-Since-Launch-11-04-26.html`, `Albright-Home-After-Hours-Campaign-Performance-Since-Launch-11-04-26.html`, `Albright-Auto-Campaign-Performance-Since-Launch-11-04-26.html`: one page per campaign
-- `Albright-Monthly-Sales-by-Source-11-04-26.html`: monthly sales by source and ad channel (Aid), with the ad channels that have the fewest quotes and binds
-- `Albright-Source-ZIP-Sales-11-04-26.html`, `Albright-ZIP-Sales-11-04-26.csv`: sales by source, ad channel (Aid) and traffic tier, county and ZIP
-- `Albright-Inbound-Call-Review-11-04-26.html`: inbound call review, Oct 6 to Nov 4, 2026
+- `Albright-Campaign-Overview-Since-Launch-11-19-26.html`: all campaigns since launch (Jul 25, 2025 through Nov 19, 2026), with the Home (LM) lead marketplace section
+- `Albright-Home-Campaign-Performance-Since-Launch-11-19-26.html`, `Albright-Home-After-Hours-Campaign-Performance-Since-Launch-11-19-26.html`, `Albright-Auto-Campaign-Performance-Since-Launch-11-19-26.html`: one page per campaign
+- `Albright-Monthly-Sales-by-Source-11-19-26.html`: monthly sales by source and ad channel (Aid), with the ad channels that have the fewest quotes and binds
+- `Albright-Source-ZIP-Sales-11-19-26.html`, `Albright-ZIP-Sales-11-19-26.csv`: sales by source, ad channel (Aid) and traffic tier, county and ZIP
+- `Albright-Producer-Pipeline-11-19-26.html`: open quotes and sales by producer, from the Producer column of the Nov 19, 2026 quoted and sold list
+- `Albright-Inbound-Call-Review-11-19-26.html`: inbound call review, Oct 21 to Nov 19, 2026
 - `Albright-SEO-Audit-10-13-26.html`: agency web page SEO audit
 - `Albright-TX-Hail-Storm-Risk-10-13-26.html`, `Albright-TX-Demographic-Research-10-13-26.html`, `Albright-TX-ZIP-Data-10-13-26.csv`: Texas market research
 - `Albright-Performance-Dashboard-10-10-26.html`: earlier interactive dashboard (not linked from the hub)
-- `vercel.json`: Vercel config: clean URLs, security headers, `noindex` so the reports stay out of search engines
+- `vercel.json`: Vercel config: clean URLs, redirects from the 11-04-26 report URLs to the 11-19-26 pages, security headers, `noindex` so the reports stay out of search engines
 
 ## Deploying
 
