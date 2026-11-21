@@ -5,77 +5,162 @@
   "redirects": [
     {
       "source": "/Albright-Campaign-Overview-Since-Launch-11-04-26",
-      "destination": "/Albright-Campaign-Overview-Since-Launch-11-19-26",
+      "destination": "/Albright-Campaign-Overview-Since-Launch-11-21-26",
       "permanent": false
     },
     {
       "source": "/Albright-Campaign-Overview-Since-Launch-11-04-26.html",
-      "destination": "/Albright-Campaign-Overview-Since-Launch-11-19-26",
+      "destination": "/Albright-Campaign-Overview-Since-Launch-11-21-26",
       "permanent": false
     },
     {
       "source": "/Albright-Home-Campaign-Performance-Since-Launch-11-04-26",
-      "destination": "/Albright-Home-Campaign-Performance-Since-Launch-11-19-26",
+      "destination": "/Albright-Home-Campaign-Performance-Since-Launch-11-21-26",
       "permanent": false
     },
     {
       "source": "/Albright-Home-Campaign-Performance-Since-Launch-11-04-26.html",
-      "destination": "/Albright-Home-Campaign-Performance-Since-Launch-11-19-26",
+      "destination": "/Albright-Home-Campaign-Performance-Since-Launch-11-21-26",
       "permanent": false
     },
     {
       "source": "/Albright-Home-After-Hours-Campaign-Performance-Since-Launch-11-04-26",
-      "destination": "/Albright-Home-After-Hours-Campaign-Performance-Since-Launch-11-19-26",
+      "destination": "/Albright-Home-After-Hours-Campaign-Performance-Since-Launch-11-21-26",
       "permanent": false
     },
     {
       "source": "/Albright-Home-After-Hours-Campaign-Performance-Since-Launch-11-04-26.html",
-      "destination": "/Albright-Home-After-Hours-Campaign-Performance-Since-Launch-11-19-26",
+      "destination": "/Albright-Home-After-Hours-Campaign-Performance-Since-Launch-11-21-26",
       "permanent": false
     },
     {
       "source": "/Albright-Auto-Campaign-Performance-Since-Launch-11-04-26",
-      "destination": "/Albright-Auto-Campaign-Performance-Since-Launch-11-19-26",
+      "destination": "/Albright-Auto-Campaign-Performance-Since-Launch-11-21-26",
       "permanent": false
     },
     {
       "source": "/Albright-Auto-Campaign-Performance-Since-Launch-11-04-26.html",
-      "destination": "/Albright-Auto-Campaign-Performance-Since-Launch-11-19-26",
+      "destination": "/Albright-Auto-Campaign-Performance-Since-Launch-11-21-26",
       "permanent": false
     },
     {
       "source": "/Albright-Monthly-Sales-by-Source-11-04-26",
-      "destination": "/Albright-Monthly-Sales-by-Source-11-19-26",
+      "destination": "/Albright-Monthly-Sales-by-Source-11-21-26",
       "permanent": false
     },
     {
       "source": "/Albright-Monthly-Sales-by-Source-11-04-26.html",
-      "destination": "/Albright-Monthly-Sales-by-Source-11-19-26",
+      "destination": "/Albright-Monthly-Sales-by-Source-11-21-26",
       "permanent": false
     },
     {
       "source": "/Albright-Source-ZIP-Sales-11-04-26",
-      "destination": "/Albright-Source-ZIP-Sales-11-19-26",
+      "destination": "/Albright-Source-ZIP-Sales-11-21-26",
       "permanent": false
     },
     {
       "source": "/Albright-Source-ZIP-Sales-11-04-26.html",
-      "destination": "/Albright-Source-ZIP-Sales-11-19-26",
+      "destination": "/Albright-Source-ZIP-Sales-11-21-26",
       "permanent": false
     },
     {
       "source": "/Albright-Inbound-Call-Review-11-04-26",
-      "destination": "/Albright-Inbound-Call-Review-11-19-26",
+      "destination": "/Albright-Inbound-Call-Review-11-21-26",
       "permanent": false
     },
     {
       "source": "/Albright-Inbound-Call-Review-11-04-26.html",
-      "destination": "/Albright-Inbound-Call-Review-11-19-26",
+      "destination": "/Albright-Inbound-Call-Review-11-21-26",
       "permanent": false
     },
     {
       "source": "/Albright-ZIP-Sales-11-04-26.csv",
-      "destination": "/Albright-ZIP-Sales-11-19-26.csv",
+      "destination": "/Albright-ZIP-Sales-11-21-26.csv",
+      "permanent": false
+    },
+    {
+      "source": "/Albright-Campaign-Overview-Since-Launch-11-19-26",
+      "destination": "/Albright-Campaign-Overview-Since-Launch-11-21-26",
+      "permanent": false
+    },
+    {
+      "source": "/Albright-Campaign-Overview-Since-Launch-11-19-26.html",
+      "destination": "/Albright-Campaign-Overview-Since-Launch-11-21-26",
+      "permanent": false
+    },
+    {
+      "source": "/Albright-Home-Campaign-Performance-Since-Launch-11-19-26",
+      "destination": "/Albright-Home-Campaign-Performance-Since-Launch-11-21-26",
+      "permanent": false
+    },
+    {
+      "source": "/Albright-Home-Campaign-Performance-Since-Launch-11-19-26.html",
+      "destination": "/Albright-Home-Campaign-Performance-Since-Launch-11-21-26",
+      "permanent": false
+    },
+    {
+      "source": "/Albright-Home-After-Hours-Campaign-Performance-Since-Launch-11-19-26",
+      "destination": "/Albright-Home-After-Hours-Campaign-Performance-Since-Launch-11-21-26",
+      "permanent": false
+    },
+    {
+      "source": "/Albright-Home-After-Hours-Campaign-Performance-Since-Launch-11-19-26.html",
+      "destination": "/Albright-Home-After-Hours-Campaign-Performance-Since-Launch-11-21-26",
+      "permanent": false
+    },
+    {
+      "source": "/Albright-Auto-Campaign-Performance-Since-Launch-11-19-26",
+      "destination": "/Albright-Auto-Campaign-Performance-Since-Launch-11-21-26",
+      "permanent": false
+    },
+    {
+      "source": "/Albright-Auto-Campaign-Performance-Since-Launch-11-19-26.html",
+      "destination": "/Albright-Auto-Campaign-Performance-Since-Launch-11-21-26",
+      "permanent": false
+    },
+    {
+      "source": "/Albright-Monthly-Sales-by-Source-11-19-26",
+      "destination": "/Albright-Monthly-Sales-by-Source-11-21-26",
+      "permanent": false
+    },
+    {
+      "source": "/Albright-Monthly-Sales-by-Source-11-19-26.html",
+      "destination": "/Albright-Monthly-Sales-by-Source-11-21-26",
+      "permanent": false
+    },
+    {
+      "source": "/Albright-Source-ZIP-Sales-11-19-26",
+      "destination": "/Albright-Source-ZIP-Sales-11-21-26",
+      "permanent": false
+    },
+    {
+      "source": "/Albright-Source-ZIP-Sales-11-19-26.html",
+      "destination": "/Albright-Source-ZIP-Sales-11-21-26",
+      "permanent": false
+    },
+    {
+      "source": "/Albright-Producer-Pipeline-11-19-26",
+      "destination": "/Albright-Producer-Pipeline-11-21-26",
+      "permanent": false
+    },
+    {
+      "source": "/Albright-Producer-Pipeline-11-19-26.html",
+      "destination": "/Albright-Producer-Pipeline-11-21-26",
+      "permanent": false
+    },
+    {
+      "source": "/Albright-Inbound-Call-Review-11-19-26",
+      "destination": "/Albright-Inbound-Call-Review-11-21-26",
+      "permanent": false
+    },
+    {
+      "source": "/Albright-Inbound-Call-Review-11-19-26.html",
+      "destination": "/Albright-Inbound-Call-Review-11-21-26",
+      "permanent": false
+    },
+    {
+      "source": "/Albright-ZIP-Sales-11-19-26.csv",
+      "destination": "/Albright-ZIP-Sales-11-21-26.csv",
       "permanent": false
     }
   ],
